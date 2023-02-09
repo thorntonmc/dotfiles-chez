@@ -1,0 +1,17 @@
+[credential]
+	helper = store
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[user]
+	name = thorntonmc
+	email = mt@mthornton.dev
+	signingkey = /home/mthornton/.ssh/id_rsa.pub
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
